@@ -83,7 +83,7 @@ To assist you in making API calls, here are some code examples in different prog
 ```python
 import requests
 
-api_url = "https://prompl.org/api/summarize"
+api_url = "https://prompl.com/api/summarize"
 headers = {"Authorization": "Bearer YOUR_API_TOKEN"}
 data = {"text": "The long text you want to summarize...", "summary_length": "short"}
 
