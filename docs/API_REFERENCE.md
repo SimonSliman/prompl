@@ -89,8 +89,3 @@ data = {"text": "The long text you want to summarize...", "summary_length": "sho
 
 response = requests.post(api_url, headers=headers, json=data)
 print(response.json())
-
-
-
-
-
