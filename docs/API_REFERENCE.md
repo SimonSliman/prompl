@@ -20,9 +20,41 @@ As an open-source project, the Prompl API is continuously evolving with contribu
 This overview provides a starting point for developers to understand the capabilities and usage of the Prompl API. Detailed information about specific endpoints, parameters, and examples will be provided in the subsequent sections.
 
 
-## Authentication
+# Authentication
 
-The process and requirements for authenticating with the Prompl API, including any necessary keys or tokens.
+The Prompl API requires authentication to ensure secure access to its features. Below are the methods available for obtaining and managing your API tokens.
+
+## Temporary Authentication Method
+
+Until the Prompl dashboard is fully operational, API tokens can be obtained through a manual request process:
+
+1. **Request a Token**: Send an email to `simon@yamnalabs.com` with the subject line "Prompl API Token Request".
+2. **Verification**: Our team will verify your account details and eligibility for API access.
+3. **Token Delivery**: Once verified, a unique API token will be securely generated and sent to your email address, along with instructions on how to use it.
+
+Please treat your API token as you would a password. Keep it confidential to protect your Prompl API access.
+
+## Web Dashboard (Coming Soon)
+
+We are working on providing a dedicated web dashboard for an enhanced user experience:
+
+1. **Dashboard Registration**: Users will be able to sign up for a Prompl account and access their personal dashboard.
+2. **Token Generation**: In the dashboard, users will easily generate and manage their API tokens with the click of a button.
+3. **Token Management**: Features like token regeneration and revocation will be available to manage API access securely.
+
+Detailed instructions and support for the dashboard will be provided upon its release. Stay tuned for updates and the official launch.
+
+## Using Your API Token
+
+Regardless of the method used to obtain your token, authenticate your API requests by including the token in the header:
+
+Authorization: Bearer YOUR_API_TOKEN
+
+
+Replace `YOUR_API_TOKEN` with the token you received. This header must be included in every API call to successfully interact with the Prompl API.
+
+For more details on API usage and best practices, refer to the respective sections in this reference.
+
 
 ## Endpoints
 
@@ -39,7 +71,7 @@ A comprehensive list of available API endpoints.
 - **Error Response**: Example of an error response, including status code and message.
 - **Sample Call**: Code snippet or command demonstrating an example call to the endpoint.
 - **Notes**: Additional information or context regarding the use of this endpoint.
-
+   
 ## Error Codes
 
 Explanation of common error codes and their implications.
