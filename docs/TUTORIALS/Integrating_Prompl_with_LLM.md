@@ -1,4 +1,4 @@
-# Integrating Prompl with Large Language Models (LLM)
+# Integrating Prompl with Large Language Models 
 
 Unlock the power of Prompl by integrating it with a Large Language Model (LLM) to enable advanced AI functionalities.
 
