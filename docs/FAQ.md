@@ -1,4 +1,4 @@
-# Frequently Asked Questions (FAQ) for Prompl
+# Frequently Asked Questions for Prompl
 
 The Prompl FAQ addresses common inquiries, supporting users as they explore the capabilities of Prompl. Detailed answers will be added as we continue to gather insights from our user community.
 
@@ -22,7 +22,7 @@ A comprehensive list of compatible AI platforms will be available.
 Prompl's user requirements and learning resources are on their way.
 
 ### How does Prompl ensure privacy and security?
-Information on safeguards and protocols will be shared in the future.
+Information on safeguards and protocols will be shared soon.
 
 ## Installation Questions
 
