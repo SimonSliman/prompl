@@ -49,6 +49,3 @@ As Prompl continues to develop, more complex commands and functionalities will b
 Now, take some time to experiment with creating your own Prompl commands, and see what you can accomplish. If you have questions or need further guidance, the community forums and support channels are available to assist you.
 
 
-Just copy and paste this text into your `Getting_Started_with_Prompl.md` file, and you'll be all set with the initial content for that tutorial.
-
-
