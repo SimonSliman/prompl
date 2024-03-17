@@ -68,7 +68,15 @@ Prompl API uses standard HTTP status codes to indicate the success or failure of
 
 To ensure fair usage, the Prompl API enforces rate limits: 1000 requests per hour per API token. Exceeding this rate results in a `429 Too Many Requests` status code.
 
+## Changelog
+
+The Prompl API is continually evolving. This section will track changes to the API, including new endpoints, deprecated features, and updates to existing endpoints. Stay tuned for regular updates to ensure your applications remain compatible and take advantage of the latest features.
+
+Updates to this API reference will be made as new features are developed and existing features are refined. Your feedback is invaluable for improving this resource.
+
 ## Code Examples
+
+To assist you in making API calls, here are some code examples in different programming languages.
 
 ### Python Example
 
@@ -82,30 +90,7 @@ data = {"text": "The long text you want to summarize...", "summary_length": "sho
 response = requests.post(api_url, headers=headers, json=data)
 print(response.json())
 
-### JavaScript Example
-
-```javascript
-fetch('https://prompl.org/api/summarize', {
-  method: 'POST',
-  headers: {
-    'Authorization': 'Bearer YOUR_API_TOKEN',
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify({
-    text: 'The long text you want to summarize...',
-    summary_length: 'short',
-  }),
-})
-.then(response => response.json())
-.then(data => console.log(data))
-.catch(error => console.error('Error:', error));
-
-Changelog
-The Prompl API is continually evolving. This section will track changes to the API, including new endpoints, deprecated features, and updates to existing endpoints. Stay tuned for regular updates to ensure your applications remain compatible and take advantage of the latest features.
-
-Updates to this API reference will be made as new features are developed and existing features are refined. Your feedback is invaluable for improving this resource.
 
 
-This structure provides a clear, concise way to add more programming language examples to your documentation, enhancing its utility for a broader audience. The Changelog section at the end serves as a commitment to maintaining and updating the API documentation, reinforcing the open-source nature of Prompl and encouraging community feedback.
 
 
