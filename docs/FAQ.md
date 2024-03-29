@@ -11,7 +11,7 @@ Prompl is an innovative tool designed to streamline AI interactions.
 Prompl is crafted for a diverse audience, from coders to creatives.
 
 ### Is Prompl free to use?
-Details on Prompl's accessibility will be provided soon.
+Yes. Details on Prompl's accessibility will be provided soon.
 
 ## Technical Questions
 
