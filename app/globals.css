@@ -42,6 +42,7 @@
   --radius-small: 14px;
 }
 
+@layer base {
 html {
   background: var(--ground);
 }
@@ -60,6 +61,9 @@ a {
 a:hover {
   color: var(--accent-hover);
 }
+}
+
+@layer components {
 
 .font-heading {
   font-family: var(--font-space-grotesk), sans-serif;
@@ -288,4 +292,5 @@ select.input {
   padding-left: 1.25rem;
 }
 
+}
 /* Leaflet overrides live in the map modal component. */
