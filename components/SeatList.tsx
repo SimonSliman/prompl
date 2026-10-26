@@ -24,7 +24,7 @@ export function SeatList({ seats, seatTarget, yoursHint = false }: { seats: Seat
       ))}
       {open > 0 && (
         <div className="flex items-center gap-2">
-          {Array.from({ length: Math.min(open, 6) }).map((_, i) => (
+          {Array.from({ length: Math.min(open, 3) }).map((_, i) => (
             <div
               key={i}
               className="h-11 w-11 shrink-0 rounded-full border-2 border-dashed"
