@@ -1,0 +1,291 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #121417;
+  --ground: #F6F6F3;
+  --card: #FFFFFF;
+  --accent: #2747D8;
+  --accent-hover: #1A33A8;
+  --accent-tint: #EEF1FD;
+  --muted: #5A5F67;
+  --body: #3B3F46;
+  --line: #D9DBD6;
+  --line-soft: #ECEDEA;
+  --success: #1F7A4D;
+  --dark-secondary: #9DB0FF;
+  --dark-body: #C9CCD2;
+  --dark-pill: #262A31;
+  --dashed: #9A9EA5;
+  --promise-text: #1E2A6B;
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-ground: var(--ground);
+  --color-card: var(--card);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-tint: var(--accent-tint);
+  --color-muted: var(--muted);
+  --color-body: var(--body);
+  --color-line: var(--line);
+  --color-line-soft: var(--line-soft);
+  --color-success: var(--success);
+  --color-dark-secondary: var(--dark-secondary);
+  --color-dark-body: var(--dark-body);
+  --color-dark-pill: var(--dark-pill);
+  --color-dashed: var(--dashed);
+  --color-promise-text: var(--promise-text);
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-heading: var(--font-space-grotesk), sans-serif;
+  --radius-card: 16px;
+  --radius-small: 14px;
+}
+
+html {
+  background: var(--ground);
+}
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--accent);
+}
+a:hover {
+  color: var(--accent-hover);
+}
+
+.font-heading {
+  font-family: var(--font-space-grotesk), sans-serif;
+}
+
+/* Shared component classes */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0 1.25rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background-color 120ms ease, color 120ms ease, opacity 120ms ease;
+}
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.btn-primary {
+  min-height: 52px;
+  padding: 0 1.75rem;
+  background: var(--accent);
+  color: #fff;
+  font-size: 1.0625rem;
+}
+.btn-primary:hover:not(:disabled) {
+  background: var(--accent-hover);
+  color: #fff;
+}
+.btn-ink {
+  background: var(--ink);
+  color: #fff;
+}
+.btn-ink:hover {
+  color: #fff;
+  background: #000;
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+}
+.btn-ghost:hover {
+  color: var(--accent);
+}
+.btn-outline {
+  background: var(--card);
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+.btn-outline:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+.btn-block {
+  display: flex;
+  width: 100%;
+  min-height: 54px;
+  font-size: 1.0625rem;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 16px;
+}
+
+.input {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 14px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  font-size: 16px;
+  font-family: inherit;
+  color: var(--ink);
+  outline: none;
+}
+.input:focus {
+  border-color: var(--ink);
+  box-shadow: 0 0 0 1px var(--ink);
+}
+textarea.input {
+  padding: 12px 14px;
+  min-height: 96px;
+  resize: vertical;
+  line-height: 1.45;
+}
+select.input {
+  appearance: none;
+  padding-right: 36px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%235A5F67' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+}
+.label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.helper {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--ink);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.chip:hover {
+  border-color: var(--ink);
+}
+.chip[aria-pressed="true"],
+.chip[data-selected="true"] {
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  font-weight: 600;
+}
+.chip:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.segmented {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 999px;
+  background: var(--line-soft);
+}
+.segmented > button {
+  flex: 1;
+  min-height: 40px;
+  border-radius: 999px;
+  border: 0;
+  background: transparent;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--body);
+  cursor: pointer;
+}
+.segmented > button[aria-pressed="true"] {
+  background: var(--card);
+  color: var(--ink);
+  font-weight: 600;
+  box-shadow: 0 1px 2px rgba(18, 20, 23, 0.08);
+}
+
+.option-card {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  font-family: inherit;
+  color: var(--ink);
+  cursor: pointer;
+  width: 100%;
+}
+.option-card[aria-pressed="true"] {
+  border: 2px solid var(--accent);
+  padding: 15px;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.prose-legal h1 {
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5rem;
+}
+.prose-legal h2 {
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin: 2rem 0 0.5rem;
+}
+.prose-legal p,
+.prose-legal li {
+  color: var(--body);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+.prose-legal ul {
+  padding-left: 1.25rem;
+}
+
+/* Leaflet overrides live in the map modal component. */
